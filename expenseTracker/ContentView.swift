@@ -18,15 +18,15 @@ struct ContentView: View {
                         
                     }
                     .padding()
-                    .frame(maxWidth: .infinity)
+                    .frame(maxWidth: .infinity) // infinity is used for the frame to spread the background color
                 }
                 .background(Color.background)
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     // notification Icon
                     ToolbarItem{
-                        Image(systemName: "bell.badge")
-                            .symbolRenderingMode(.palette)
+                        Image(systemName: "bell.badge") // notification bell
+                            .symbolRenderingMode(.palette) // for bell to use colors from set palette
                             .foregroundStyle(Color.icon, .primary)
                     }
                 }

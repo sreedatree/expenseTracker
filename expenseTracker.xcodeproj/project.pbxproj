@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57344BEA2A50BF3000AD9CB1 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57344BE92A50BF3000AD9CB1 /* PreviewData.swift */; };
+		57344BEC2A50C0FB00AD9CB1 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57344BEB2A50C0FB00AD9CB1 /* TransactionRow.swift */; };
 		57DE14032A50A7FF00FB4A96 /* expenseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE14022A50A7FF00FB4A96 /* expenseTrackerApp.swift */; };
 		57DE14052A50A7FF00FB4A96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE14042A50A7FF00FB4A96 /* ContentView.swift */; };
 		57DE14072A50A80000FB4A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DE14062A50A80000FB4A96 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57344BE92A50BF3000AD9CB1 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		57344BEB2A50C0FB00AD9CB1 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
 		57DE13FF2A50A7FF00FB4A96 /* expenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = expenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DE14022A50A7FF00FB4A96 /* expenseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = expenseTrackerApp.swift; sourceTree = "<group>"; };
 		57DE14042A50A7FF00FB4A96 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +61,7 @@
 			children = (
 				57DE14022A50A7FF00FB4A96 /* expenseTrackerApp.swift */,
 				57DE14042A50A7FF00FB4A96 /* ContentView.swift */,
+				57344BEB2A50C0FB00AD9CB1 /* TransactionRow.swift */,
 				57DE14122A50B7CA00FB4A96 /* transactionModel.swift */,
 				57DE14102A50AE5A00FB4A96 /* extensions.swift */,
 				57DE14062A50A80000FB4A96 /* Assets.xcassets */,
@@ -69,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				57DE14092A50A80000FB4A96 /* Preview Assets.xcassets */,
+				57344BE92A50BF3000AD9CB1 /* PreviewData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -143,8 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57344BEA2A50BF3000AD9CB1 /* PreviewData.swift in Sources */,
 				57DE14132A50B7CA00FB4A96 /* transactionModel.swift in Sources */,
 				57DE14052A50A7FF00FB4A96 /* ContentView.swift in Sources */,
+				57344BEC2A50C0FB00AD9CB1 /* TransactionRow.swift in Sources */,
 				57DE14032A50A7FF00FB4A96 /* expenseTrackerApp.swift in Sources */,
 				57DE14112A50AE5A00FB4A96 /* extensions.swift in Sources */,
 			);
