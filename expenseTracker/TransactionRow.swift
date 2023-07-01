@@ -32,8 +32,11 @@ struct TransactionRow: View {
                     //.opacity(1)
                     //.lineLimit(1)
             }
+            Spacer()
+                .frame(width: 50.0)
+                
             // amount spent in transaction
-            Text(transaction.amount, format: .currency(code: "USD"))
+            Text(transaction.signedAmount, format: .currency(code: "USD"))
                 .bold()
                 .foregroundColor(transaction.type == TransactionType.credit.rawValue ? Color.text : .primary)
             
