@@ -16,24 +16,24 @@ struct ContentView: View {
                             .font(.title2)
                             .bold()
                         
-                    }
+                    } // end of vstack
                     .padding()
                     .frame(maxWidth: .infinity) // infinity is used for the frame to spread the background color
-                }
+                } // end of scrollview
                 .background(Color.background)
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     // notification Icon
-                    ToolbarItem{
+                    ToolbarItem{ // toolbar item is used for item located on the upper toolbar. currently being used for the notification bell
                         Image(systemName: "bell.badge") // notification bell
                             .symbolRenderingMode(.palette) // for bell to use colors from set palette
                             .foregroundStyle(Color.icon, .primary)
-                    }
-                }
-            }
+                    } // end of toolbar item
+                } // end od toolbar
+            } // end of navigation view
             .navigationViewStyle(.stack)
-        }
-    }
+        } // end of body
+    } // end od view
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

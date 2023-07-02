@@ -6,19 +6,20 @@
 //
 
 import SwiftUI
-import SwiftUIFontIcon
+import SwiftUIFontIcon // importing icon pack from github
 
 struct TransactionRow: View {
-    var transaction : Transaction
+    var transaction : Transaction // creating a variable named transaction in order to hold transactions
     
     var body: some View {
         HStack(spacing:20) {
+            // below block is used for making the shape to hold the category icons
             RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .fill(Color.icon.opacity(0.5))
                 .frame(width: 40, height: 40)
                 .overlay {
-                    FontIcon.text(.awesome5Solid(code: .icons), fontsize: 20, color: Color.icon)
-                }
+                    FontIcon.text(.awesome5Solid(code: .icons), fontsize: 20, color: Color.icon) // pulling in icon from imported icon pack and assigning size and color
+                } // end of overlay
             VStack(alignment: .leading, spacing: 6){
                 // merchant of where transaction took place
                 Text(transaction.merchant)
@@ -38,8 +39,9 @@ struct TransactionRow: View {
                     .foregroundColor(.secondary)
                     //.opacity(1)
                     //.lineLimit(1)
-            }
-            Spacer()
+            } // end of vstack
+            
+            Spacer() // spacer is being used in order to give some space between the transaction details and transaction amount for stylistics
                 .frame(width: 50.0)
                 
             // amount spent in transaction
@@ -47,10 +49,10 @@ struct TransactionRow: View {
                 .bold()
                 .foregroundColor(transaction.type == TransactionType.credit.rawValue ? Color.text : .primary)
             
-        }
-        .padding([.top, .bottom], 8)
-    }
-}
+        } // end of hstack
+        .padding([.top, .bottom], 8) // padding for space between the end of the screen and transaction and each transaction
+    } // end of body
+} // end of view
 
 struct TransactionRow_Previews: PreviewProvider {
     static var previews: some View {

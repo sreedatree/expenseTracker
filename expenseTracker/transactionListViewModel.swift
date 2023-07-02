@@ -9,21 +9,21 @@ import Foundation
 import Combine
 
 
-final class transactionListViewModel : ObservableObject {
+final class transactionListViewModel : ObservableObject { //declaring a class as final, so that no other class can inherit from it
     
-    @Published var transactions: [Transaction] = []
+    @Published var transactions: [Transaction] = [] //@published is being used to allow us to create observable objects that automatically announce when changes occur and notify users of changes (such as withdrawals, deposits, transactions, etc.) var transactions is being assigned to the array of transactions
     private var cancellables = Set<AnyCancellable>()
     
     init() {
         getTransactions()
-    }
+    } // creating an intializer for getTransactions
     
     
     func getTransactions() {
         guard let url = URL(string: "https://designcode.io/data/transactions.json") else {
             print("invalid URL")
             return
-        }
+        } // function getTransactions is taking the json file and importing that data. if it doesn't import, it will say "invalid URL"
         
         URLSession.shared.dataTaskPublisher(for: url)
             .tryMap{(data, response) -> Data in
