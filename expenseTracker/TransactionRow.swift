@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import SwiftUIFontIcon
 
 struct TransactionRow: View {
     var transaction : Transaction
     
     var body: some View {
         HStack(spacing:20) {
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .fill(Color.icon.opacity(0.5))
+                .frame(width: 40, height: 40)
+                .overlay {
+                    FontIcon.text(.awesome5Solid(code: .icons), fontsize: 20, color: Color.icon)
+                }
             VStack(alignment: .leading, spacing: 6){
                 // merchant of where transaction took place
                 Text(transaction.merchant)
