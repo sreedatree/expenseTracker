@@ -25,23 +25,23 @@ final class transactionListViewModel : ObservableObject { //declaring a class as
             return
         } // function getTransactions is taking the json file and importing that data. if it doesn't import, it will say "invalid URL"
         
-        URLSession.shared.dataTaskPublisher(for: url)
-            .tryMap{(data, response) -> Data in
+        URLSession.shared.dataTaskPublisher(for: url) // this line of code returns a publisher that wraps a URL session data task for a given URL.
+            .tryMap{(data, response) -> Data in // the trymap operator uses a closure to transform each element it receives from the publisher who receives elements (aka the upstream publisher)
                 guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else{
-                    dump(response)
-                    throw URLError(.badServerResponse)
+                    dump(response) // ouputs the whole hierarchy of 'response'
+                    throw URLError(.badServerResponse) // throw function is used in order to handle errors
                 }
                 
                 return data
             }
-            .decode(type: [Transaction].self, decoder: JSONDecoder())
-            .receive(on: DispatchQueue.main)
-            .sink {completion in
+            .decode(type: [Transaction].self, decoder: JSONDecoder()) //.decode is used for decoding the JSON File to output the way it was programmed to
+            .receive(on: DispatchQueue.main) // .receive is used to recieve results from the option after 'on: '. in this case, it is being used for receiving results from dispatchqueue.main.
+            .sink {completion in // .sink is used for observing values received by the publisher and printing them to the console
                 switch completion {
-                case .failure(let error):
+                case .failure(let error): // if it fails, print an error message to the console and along with it, print the error type.
                     print("Error fetching transactions:", error.localizedDescription)
                     
-                case .finished:
+                case .finished: // if it successfully completed, print a message to the console.
                     print("finished fetching all recent transactions")
                     
                 }

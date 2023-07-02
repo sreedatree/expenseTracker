@@ -21,7 +21,7 @@ struct Transaction: Identifiable, Decodable {
     var isTransfer: Bool
     var isExpense: Bool
     var isEdited: Bool
-    
+    // takes the transaction data and formats them into the data types hey are assigned within the program
     var dateParsed: Date {
         date.dateParsed()
     }
