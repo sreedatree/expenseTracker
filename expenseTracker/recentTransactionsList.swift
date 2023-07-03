@@ -9,7 +9,27 @@ import SwiftUI
 
 struct recentTransactionsList: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Text("Recent Transactions")
+                    .font(.headline)
+                
+                Spacer()
+                
+                NavigationLink {
+                    
+                } label: {
+                    HStack(spacing: 5.5) {
+                        Text("See all")
+                        Image(systemName: "chevron.right")
+                    }
+                    .foregroundColor(Color.text)
+                }
+
+            }
+            .padding(.top)
+        }
+        .padding()
     }
 }
 
