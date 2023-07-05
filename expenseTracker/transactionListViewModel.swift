@@ -7,9 +7,10 @@
 
 import Foundation
 import Combine
+import Collections
 
 
-typealias TransactionGroup = [String : [Transaction]]
+typealias TransactionGroup = OrderedDictionary<String, [Transaction]>
 
 final class transactionListViewModel : ObservableObject { //declaring a class as final, so that no other class can inherit from it
     
