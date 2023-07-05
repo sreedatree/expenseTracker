@@ -12,6 +12,7 @@
 		571AC6A62A51E00B0078E463 /* recentTransactionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571AC6A52A51E00B0078E463 /* recentTransactionsList.swift */; };
 		57344BEA2A50BF3000AD9CB1 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57344BE92A50BF3000AD9CB1 /* PreviewData.swift */; };
 		57344BEC2A50C0FB00AD9CB1 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57344BEB2A50C0FB00AD9CB1 /* TransactionRow.swift */; };
+		57CE89BD2A55BD9600F98093 /* transactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CE89BC2A55BD9600F98093 /* transactionList.swift */; };
 		57DE14032A50A7FF00FB4A96 /* expenseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE14022A50A7FF00FB4A96 /* expenseTrackerApp.swift */; };
 		57DE14052A50A7FF00FB4A96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DE14042A50A7FF00FB4A96 /* ContentView.swift */; };
 		57DE14072A50A80000FB4A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DE14062A50A80000FB4A96 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		571AC6A52A51E00B0078E463 /* recentTransactionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recentTransactionsList.swift; sourceTree = "<group>"; };
 		57344BE92A50BF3000AD9CB1 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		57344BEB2A50C0FB00AD9CB1 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
+		57CE89BC2A55BD9600F98093 /* transactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transactionList.swift; sourceTree = "<group>"; };
 		57DE13FF2A50A7FF00FB4A96 /* expenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = expenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DE14022A50A7FF00FB4A96 /* expenseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = expenseTrackerApp.swift; sourceTree = "<group>"; };
 		57DE14042A50A7FF00FB4A96 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				57DE14022A50A7FF00FB4A96 /* expenseTrackerApp.swift */,
 				57DE14042A50A7FF00FB4A96 /* ContentView.swift */,
 				571AC6A52A51E00B0078E463 /* recentTransactionsList.swift */,
+				57CE89BC2A55BD9600F98093 /* transactionList.swift */,
 				57344BEB2A50C0FB00AD9CB1 /* TransactionRow.swift */,
 				571AC6A32A51CCB50078E463 /* transactionListViewModel.swift */,
 				57DE14122A50B7CA00FB4A96 /* transactionModel.swift */,
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				571AC6A42A51CCB50078E463 /* transactionListViewModel.swift in Sources */,
+				57CE89BD2A55BD9600F98093 /* transactionList.swift in Sources */,
 				57344BEA2A50BF3000AD9CB1 /* PreviewData.swift in Sources */,
 				57DE14132A50B7CA00FB4A96 /* transactionModel.swift in Sources */,
 				57DE14052A50A7FF00FB4A96 /* ContentView.swift in Sources */,

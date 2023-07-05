@@ -9,6 +9,8 @@ import Foundation
 import Combine
 
 
+typealias TransactionGroup = [String : [Transaction]]
+
 final class transactionListViewModel : ObservableObject { //declaring a class as final, so that no other class can inherit from it
     
     @Published var transactions: [Transaction] = [] //@published is being used to allow us to create observable objects that automatically announce when changes occur and notify users of changes (such as withdrawals, deposits, transactions, etc.) var transactions is being assigned to the array of transactions
@@ -52,4 +54,11 @@ final class transactionListViewModel : ObservableObject { //declaring a class as
                 .store(in: &cancellables)
                 
             }
+    func groupTransactionsByMonth() -> TransactionGroup {
+        guard !transactions.isEmpty else { return [:] }
+        
+        let groupedTransactions = TransactionGroup(grouping: transactions) {$0.month}
+        
+        return groupedTransactions
+    }
     }
