@@ -16,9 +16,9 @@ struct TransactionRow: View {
             // below block is used for making the shape to hold the category icons
             RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .fill(Color.icon.opacity(0.5))
-                .frame(width: 40, height: 40)
+                .frame(width: 42, height: 42)
                 .overlay {
-                    FontIcon.text(.awesome5Solid(code: .icons), fontsize: 20, color: Color.icon) // pulling in icon from imported icon pack and assigning size and color
+                    FontIcon.text(.awesome5Solid(code: transaction.icon), fontsize: 20, color: Color.icon) // pulling in icons from imported icon pack and assigning size and color
                 } // end of overlay
             VStack(alignment: .leading, spacing: 6){
                 // merchant of where transaction took place
@@ -30,7 +30,7 @@ struct TransactionRow: View {
                 // category of the transaction
                 Text(transaction.category)
                     .font(.caption)
-                    .opacity(0.65)
+                    .opacity(0.68)
                     .lineLimit(1)
                 
                 // date of the transaction
@@ -42,7 +42,6 @@ struct TransactionRow: View {
             } // end of vstack
             
             Spacer() // spacer is being used in order to give some space between the transaction details and transaction amount for stylistics
-                .frame(width: 50.0)
                 
             // amount spent in transaction
             Text(transaction.signedAmount, format: .currency(code: "USD"))

@@ -16,6 +16,8 @@ struct ContentView: View {
                             .font(.title2)
                             .bold()
                         
+                        recentTransactionsList()
+                        
                     } // end of vstack
                     .padding()
                     .frame(maxWidth: .infinity) // infinity is used for the frame to spread the background color
@@ -33,12 +35,20 @@ struct ContentView: View {
             } // end of navigation view
             .navigationViewStyle(.stack)
         } // end of body
-    } // end od view
+    } // end of view
 
 struct ContentView_Previews: PreviewProvider {
+    static let transactionListVM: transactionListViewModel = {
+        let transactionListVM = transactionListViewModel()
+        transactionListVM.transactions = transactionListPreviewData
+        return transactionListVM
+    }()
     static var previews: some View {
-        ContentView()
-        ContentView()
-            .preferredColorScheme(.dark)
+        Group {
+            ContentView()
+            ContentView()
+                .preferredColorScheme(.dark)
+        }
+        .environmentObject(transactionListVM)
     }
 }
