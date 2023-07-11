@@ -13,7 +13,7 @@ struct ContentView: View {
     // var demoData: [Double] = [8, 2, 4, 6, 12, 9, 2]
     
     var body: some View {
-        NavigationView{
+        NavigationView {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 24) {
                         Text("Overview")
@@ -24,17 +24,17 @@ struct ContentView: View {
                         if !data.isEmpty {
                             let totalExpenses = data.last?.1 ?? 0
                             
-                            CardView {
+                            CardView { // this card view holds the items for the chart such as the text stating the total amount along with currency label, the actual chart itself, and the background color of the card
                                 VStack(alignment: .leading) {
                                     ChartLabel(totalExpenses.formatted(.currency(code: "USD")), type: .title, format: "$%.02f")
                                     LineChart()
-                                }
+                                } // end of vstack
                                 .background(Color.systemBackground)
-                            }
+                            } // end of card view
                             .data(data)
                             .chartStyle(ChartStyle(backgroundColor: Color.systemBackground, foregroundColor: ColorGradient(Color.icon.opacity(0.4), Color.icon)))
                             .frame(height: 300)
-                        }
+                        } // end of if data.isempty statement
                             recentTransactionsList()
                         
                     } // end of vstack
@@ -67,7 +67,7 @@ struct ContentView_Previews: PreviewProvider {
             ContentView()
             ContentView()
                 .preferredColorScheme(.dark)
-        }
+        } // end of group
         .environmentObject(transactionListVM)
-    }
-}
+    } // end of static var
+} // end of struct
